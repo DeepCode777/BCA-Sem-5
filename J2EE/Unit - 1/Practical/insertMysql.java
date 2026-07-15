@@ -19,7 +19,7 @@ public class insertMysql {
 			
 			System.out.println(pst.executeUpdate()+" Reccord Inserted");
 			
-			ResultSet rs = pst.executeQuery("select * from j2ee");
+			ResultSet rs = pst.executeQuery("select * from tryTB");
 			while(rs.next()) {
 				System.out.println("ID : "+ rs.getInt(1)+ "\nName : "+ rs.getString(2)+ "\nCity : " +rs.getString(3));
 			}
