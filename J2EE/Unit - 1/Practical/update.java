@@ -6,17 +6,18 @@ public class update {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/deep","root","");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/demo","root","");
+			System.out.println("Driver Connected");
 			
-			PreparedStatement pst = con.prepareStatement("update j2ee set name=?, city=? where id=?");
+			PreparedStatement pst = con.prepareStatement("update tryTB set name=?, city=? where id=?");
 			
-			pst.setString(1, "Ashish");
-			pst.setString(2, "Amarnagaer");
-			pst.setInt(3, 3);
+			pst.setString(1, "Ashish");        // name
+			pst.setString(2, "Amarnagaer");    // city
+			pst.setInt(3, 3);                  // id
 			
 			System.out.println(pst.executeUpdate()+ " Recored Upadate");
 			
-			ResultSet rs = pst.executeQuery("select * from j2ee");
+			ResultSet rs = pst.executeQuery("select * from tryTB");
 			while(rs.next()) {
 				System.out.println("ID : "+ rs.getInt(1) +"\nName : "+rs.getString(2) +"\nCity : "+ rs.getString(3));
 			}
