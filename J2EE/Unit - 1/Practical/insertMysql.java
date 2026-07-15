@@ -6,16 +6,18 @@ public class insertMysql {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/deep","root","");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/demo","root","");
 			System.out.println("Driver Connected");
 			
-			PreparedStatement pst = con.prepareStatement("insert into j2ee values(?,?,?)");
+			PreparedStatement pst = con.prepareStatement("insert into tryTB values(?,?,?)");
+
+            // database_name : demo
+			// table_name : tryTB
+			pst.setInt(1, 3);  // id
+			pst.setString(2, "Deep");  // name
+			pst.setString(3, "Rajkot");  // city
 			
-			pst.setInt(1, 5);
-			pst.setString(2, "Prakash");
-			pst.setString(3, "Jilariya");
-			
-			System.out.println(pst.executeUpdate()+"Reccord Inserted");
+			System.out.println(pst.executeUpdate()+" Reccord Inserted");
 			
 			ResultSet rs = pst.executeQuery("select * from j2ee");
 			while(rs.next()) {
