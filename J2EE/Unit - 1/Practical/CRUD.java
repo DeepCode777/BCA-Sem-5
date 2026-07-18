@@ -26,6 +26,22 @@ public class CRUD{
                 switch(num) {
                     case 1:
                         insert();
+                        PreparedStatement ps = con.prepareStatement("insert into demo values(?, ?, ?)");
+                        
+                        System.out.println("Enter ID : ");
+                        int id = Integer.parseInt(br.readLine());
+                        
+                        System.out.println("Enter Name : ");
+                        String name = br.readLine();
+                        
+                        System.out.println("Enter City Name : ");
+                        String city = br.readLine();
+                        
+                        ps.setInt(1, id);;
+                        ps.setString(2, name);
+                        ps.setString(3, city);
+                        
+                        System.out.println(ps.executeUpdate()+ " Record Inserted");
                         break;
                         
                     case 2:
