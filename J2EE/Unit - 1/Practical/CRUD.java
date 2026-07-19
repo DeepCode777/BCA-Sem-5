@@ -78,6 +78,12 @@ public class CRUD{
                         
                     case 4:
                         showdata();
+                        PreparedStatement pshow = con.prepareStatement("select * from demo");
+                        ResultSet rs = pshow.executeQuery();
+                        
+                        while(rs.next()) {
+                            System.out.println("ID : "+ rs.getInt(1)+ " Name : "+ rs.getString(2)+ " City : "+ rs.getString(3));
+                        }
                         break;
                         
                     case 5:
