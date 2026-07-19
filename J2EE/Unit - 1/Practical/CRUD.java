@@ -66,6 +66,14 @@ public class CRUD{
                         
                     case 3:
                         delet();
+                        PreparedStatement pDel = con.prepareStatement("delete from demo where id=?");
+                        
+                        System.out.println("Enter Id for delete Record : ");
+                        int idDel = Integer.parseInt(br.readLine());
+                        
+                        pDel.setInt(1, idDel);
+                        
+                        System.out.println(pDel.executeUpdate()+ " Record Deleted");
                         break;
                         
                     case 4:
