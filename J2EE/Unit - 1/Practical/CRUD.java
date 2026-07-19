@@ -46,6 +46,22 @@ public class CRUD{
                         
                     case 2:
                         update();
+                        PreparedStatement psup = con.prepareStatement("update demo set name=?, city=? where id=?");
+                        
+                        System.out.println("Enter name to Update : ");
+                        String nameUp = br.readLine();
+                        
+                        System.out.println("Enter City Name To update : ");
+                        String cityUp = br.readLine();
+                        
+                        System.out.println("Enter Id Where To Update : ");
+                        int idUp = Integer.parseInt(br.readLine());
+                        
+                        psup.setString(1, nameUp);
+                        psup.setString(2, cityUp);
+                        psup.setInt(3, idUp);
+                        
+                        System.out.println(psup.executeUpdate()+ " Record Updated");
                         break;
                         
                     case 3:
