@@ -12,3 +12,13 @@ if(a < b):
     print("A is greater then B")
 else:
     print("B is greater then A")
+
+#3] elif statment
+x = 10
+y =  10
+if(x < y):
+    print("A is greater then B")
+elif(x > y):
+    print("B is greater then A")
+else:
+    print("x and y are equale")
