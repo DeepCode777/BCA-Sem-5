@@ -18,3 +18,12 @@ for i in range(1, 11):
     
 print()
 print("End...!")
+
+
+print("<===For Loop Odd Number===>")
+#(Stating, ending ,update)
+for i in range (1,21,2): 
+    print(i, end=", ")
+    
+print()
+print("End...!")
