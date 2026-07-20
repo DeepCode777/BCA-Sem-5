@@ -9,3 +9,12 @@ while (count < 10):
     
 print()
 print("End...!")
+
+
+print("<===For Loop ===>")
+
+for i in range(1, 11):
+    print(i, end=", ")
+    
+print()
+print("End...!")
