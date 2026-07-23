@@ -12,19 +12,19 @@ else:
 
 print("End... pass controller")
 
-# (break statment)
+# 2] - (break statment)
 for i in range(1,10,1):
     if(i == 7):
-        break;    # Break loop if condition is true
+        break    # Break loop if condition is true
     else:
         print(i)
 
 print("End... Break controller")
 
-# (continue statment)
+# 3] - (continue statment)
 for i in range(1,5,1):
     if(i == 7):
-        continue
+        continue    # Skip control if condition is true
     else:
         print(i)
 
