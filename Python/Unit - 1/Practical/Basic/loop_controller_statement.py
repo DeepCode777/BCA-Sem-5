@@ -11,3 +11,12 @@ else:
     print("B is grater")
 
 print("End... pass controller")
+
+# (break statment)
+for i in range(1,10,1):
+    if(i == 7):
+        break;    # Break loop if condition is true
+    else:
+        print(i)
+
+print("End... Break controller")
