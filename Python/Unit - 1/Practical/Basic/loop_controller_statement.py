@@ -20,3 +20,12 @@ for i in range(1,10,1):
         print(i)
 
 print("End... Break controller")
+
+# (continue statment)
+for i in range(1,5,1):
+    if(i == 7):
+        continue
+    else:
+        print(i)
+
+print("End... Continue controller")
