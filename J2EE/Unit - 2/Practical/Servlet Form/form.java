@@ -11,16 +11,35 @@ public class form extends HttpServlet {
 
         PrintWriter pw = res.getWriter();
 
-        pw.print("<h2><i><u>Form Data</u></i></h2>");
-        pw.print("<br>");
-
         String nm = req.getParameter("email");
         String pass = req.getParameter("password");
-        String contry = req.getParameter("contry");
+        String con = req.getParameter("contry");
 
-        pw.print("Username : " + nm + "<br>");
-        pw.print("Password : " + pass + "<br>");
-        pw.print("Contry : " + contry + "<br>"); 
+        pw.print("<!DOCTYPE html>");
+        pw.print("<html>");
+        pw.print("<head>");
+            pw.print("<title>Registration Data</title>");
+        pw.print("</head>");
+        pw.print("<body>");
+            pw.print("<h2><i><u>Form Data</u></i></h2>");
+            pw.print("<br><br>");
+
+            pw.print("<table border=1>");
+                pw.print("<tr>");
+                    pw.print("<th>Username</th>");
+                    pw.print("<th>Password</th>");
+                    pw.print("<th>Contry</th>");
+                pw.print("</tr>");
+
+                pw.print("<tr>");
+                    pw.print("<td>" + nm + "</td>");
+                    pw.print("<td>" + pass + "</td>");
+                    pw.print("<td>" + con + "</td>");
+                pw.print("</tr>");
+
+            pw.print("</table>");
+        pw.print("</body>");
+        pw.print("</html>");
 
     }
 }
