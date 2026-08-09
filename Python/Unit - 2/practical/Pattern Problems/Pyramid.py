@@ -10,3 +10,7 @@ for i in range(1, rows + 1):  # Outer loop for rows
     for k in range(1, 2 * i):  # Inner loop for stars
         print("*", end=" ")
     print()
+
+#solutiom - 2
+for i in range(1, rows + 1):
+    print(" " * (rows - i) + "* " * i)
