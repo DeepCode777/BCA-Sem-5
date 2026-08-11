@@ -13,3 +13,20 @@ class emp():    #class
 
 e = emp()    #class - object 
 e.display()    #call methode Of Class
+
+
+#Class Without __init__ method
+
+class employee():
+
+    id = int(input("Emter ID ; " + "\n"))
+    name = input("Emter Nmae ; " + "\n")
+    age = int(input("Emter Age ; " + "\n"))
+    
+    def display(self):
+        print("Employee ID : ", self.id)
+        print("Employee Name : ", self.name)
+        print("Employee Age : ", self.age)
+
+E1 = employee()
+E1.display()
